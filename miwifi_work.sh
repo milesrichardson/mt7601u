@@ -10,7 +10,7 @@ modprobe rtnet7601Uap
 ifconfig ra0 up
 ifconfig ra0 192.168.199.1
 #dhcp the network
-dhcpd ra0
+udhcpd ra0
 #make if forward work from eth0
 echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
 iptables -t filter -F
